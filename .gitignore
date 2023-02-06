@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Aws public encryption key
+node-key.pem
+
+# Package lock file
+package-lock.json

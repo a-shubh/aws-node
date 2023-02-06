@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "push": "git add . && git commit -m \"npm_config_message\" && git push origin main",
+    "pull": "git pull origin main",
+    "deploy": "pm2 restart index.js"
   },
   "repository": {
     "type": "git",
