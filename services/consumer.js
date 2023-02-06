@@ -1,5 +1,5 @@
 var amqp = require('amqplib/callback_api');
-const CONN_URL = 'amqps://hmvzuxvv:kJp-OcEDKLM-37IPmwGEh7I2FaLAE-7S@moose.rmq.cloudamqp.com/hmvzuxvv';
+const CONN_URL = process.env.CONN_URL;
 
 function start() {
     try {
