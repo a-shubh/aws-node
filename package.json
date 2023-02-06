@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
+    "start": "cross-env NODE_ENV=prod nodemon index.js",
+    "dev": "cross-env NODE_ENV=dev nodemon index.js",
     "push": "git add . && git commit -m \"npm_config_message\" && git push origin main",
     "pull": "git pull origin main",
     "deploy": "pm2 restart index.js"

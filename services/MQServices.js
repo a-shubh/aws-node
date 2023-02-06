@@ -1,9 +1,9 @@
-const amqp = require('amqplib/callback_api');
+const amqp = require('amqplib');
 const CONN_URL = process.env.CONN_URL
 
 async function publishToQueue(queueName, data){
     try {
-        const conn = amqp.connect(CONN_URL)
+        const conn = await amqp.connect(CONN_URL)
         const ch = await conn.createChannel();
         ch.sendToQueue(queueName, new Buffer.from(data));
 
