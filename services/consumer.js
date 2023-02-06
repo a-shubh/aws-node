@@ -21,4 +21,4 @@ function start() {
     }
 }
 
-module.exports =  start
+module.exports =  { start }
