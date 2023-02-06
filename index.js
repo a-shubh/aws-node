@@ -7,6 +7,7 @@ const register = require('./routes/register')
 const dotenv = require('dotenv');
 const user = require('./routes/user');
 const logout = require('./routes/logout')
+const consumer = require('./services/consumer')
 var cookies = require("cookie-parser");
 
 dotenv.config()
@@ -15,6 +16,9 @@ app.use(cookies());
 
 // Parsing JSON for all api requests
 app.use(express.json())
+
+// Running RabbitMq cosumer
+consumer.start()
 
 
 // Defining base route paths for both routes
