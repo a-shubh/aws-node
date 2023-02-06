@@ -11,9 +11,9 @@ function start() {
                     setTimeout(function () {
                         console.log("Message:", msg.content.toString());
                     }, 4000);
-                }, {
-                    noAck: true
-                });
+                    ch.ack(msg);
+                }, 
+                { noAck: false });
             });
         });
     } catch (err) {
