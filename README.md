@@ -29,10 +29,11 @@ npm i
 - Connect EC2 with RDS
 
 - Now create .env and store the EC2 and RDS credentials in it.
+-  Then fork push to a new git repo and copy it's url.
 - then console login into EC2 using ssh url provided and install node and git.
 
 ```
-git clone https://github.com/a-shubh/aws-server.git
+git clone [paste your git repo url here]
 cd aws-node
 npm i
 npm start
