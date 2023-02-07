@@ -1,64 +1,50 @@
-# Schedule Mangaement
-### Set appointments for users
+# AWS-Node-Express
+### Tutorial app for setting up AWS with Node and express using RDS and Loadbalancer.
 
-
-
-- Clean code
-- Data validation
-- Agile development
 
 ## Features
 
-- Create appointment for user
-- Collision/Clash detection
-- Support for multiple users
-- View appointments for specific user
+- Basic Node concepts
+- AWS
+- RDS
 
 ## Installation
 
-Schedule Management requires [Node.js](https://nodejs.org/) v10+ to run.
+### Node
+
+AWS-Node requires [Node.js](https://nodejs.org/) v10+ to run.
+
+Install Node [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
+Clone git repo.
 
 Install the dependencies and devDependencies and start the server.
 
-```sh
-git clone https://github.com/2231sshubham/schedule_management.git
-cd schedule_management
+```
+cd aws-node
 npm i
 ```
-- Create a local Database named "schedule_management" in your psql connection.
-- Run the following command after creating the DB successfully to create modes/tables.
-```sh
-sequelize db:migrate
-node index.js
-```
 
-## Plugins
+- Spin a free RDS postgres server
+- Spin up a free EC2 ubuntu instance, make sure to have same VPC and subnet as the RDS.
+- Connect EC2 with RDS
+- Console login into EC2 using ssh url provided and install node and git.
+```
+git clone https://github.com/a-shubh/aws-server.git
+cd aws-server
+npm i
+npm start
+```
+🎉 You have successfully setup an AWS hosted Node-Express app.
 
 Api are defined as :-
 
 | Plugin | README |
 | ------ | ------ |
-| main route | http://localhost:3000/api/ |
-| set appointment | /api/appointment/add |
-| fetch appointment | /api/user_appointment/appointments |
+| main route | http://[ec2 host url]:3000/ |
+| login | /login |
+| login | /logout |
+| get users | /users
 
-## Swagger
+## Authentication
 
-This module allows you to serve auto-generated swagger-ui generated API docs from express, based on a swagger.json file. The result is living documentation for your API hosted from your API server via a route.
-
-Dillinger uses Gulp + Webpack for fast developing.
-Make a change in your file and instantaneously see your updates!
-
-Open your favorite Terminal and run these commands.
-
-Appointment:
-
-```sh
-appointment/add
-```
-
-User_appointments:
-
-```sh
-user_appointment/appointments
-```
+Authentication was enabled using JWT tokens and cookies.
