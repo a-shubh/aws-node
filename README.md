@@ -27,13 +27,17 @@ npm i
 - Spin a free RDS postgres server
 - Spin up a free EC2 ubuntu instance, make sure to have same VPC and subnet as the RDS.
 - Connect EC2 with RDS
-- Console login into EC2 using ssh url provided and install node and git.
+
+- Now create .env and store the EC2 and RDS credentials in it.
+- then console login into EC2 using ssh url provided and install node and git.
+
 ```
 git clone https://github.com/a-shubh/aws-server.git
 cd aws-node
 npm i
 npm start
 ```
+
 🎉 You have successfully setup an AWS hosted Node-Express app.
 
 Api are defined as :-
