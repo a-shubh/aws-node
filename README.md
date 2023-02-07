@@ -14,8 +14,8 @@
 
 AWS-Node requires [Node.js](https://nodejs.org/) v10+ to run.
 
-Install Node [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
-Clone git repo.
+- Install Node [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
+- Clone git repo.
 
 Install the dependencies and devDependencies and start the server.
 
@@ -30,7 +30,7 @@ npm i
 - Console login into EC2 using ssh url provided and install node and git.
 ```
 git clone https://github.com/a-shubh/aws-server.git
-cd aws-server
+cd aws-node
 npm i
 npm start
 ```
