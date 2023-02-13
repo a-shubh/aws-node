@@ -17,4 +17,7 @@ router.post('/', async(req,res) => {
     }
 })
 
+let key = "AKIAIOSFODNN7EXAMPLE"
+let secret = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+
 module.exports = router
